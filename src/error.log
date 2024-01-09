@@ -1,0 +1,80 @@
+2024-01-06T22:03:19.651Z [ERROR]: Error registering user: Cannot destructure property 'name' of 'req.body' as it is undefined.
+2024-01-06T22:17:26.240Z [ERROR]: Error registering user: Cannot destructure property 'name' of 'req.body' as it is undefined.
+2024-01-06T22:20:26.667Z [ERROR]: Error registering user: Cannot destructure property 'name' of 'req.body' as it is undefined.
+2024-01-06T22:25:21.982Z [ERROR]: Error registering user: Cannot destructure property 'name' of 'req.body' as it is undefined.
+2024-01-06T22:49:20.255Z [ERROR]: Error registering user: Cannot destructure property 'fullname' of 'req.body' as it is undefined.
+2024-01-06T23:34:54.261Z [ERROR]: Error registering user: Cannot destructure property 'email' of 'req.body' as it is undefined.
+2024-01-07T00:38:52.331Z [ERROR]: Error creating room: Room validation failed: roomName: Path `roomName` is required.
+2024-01-07T00:41:28.653Z [ERROR]: Error creating room: Room validation failed: roomName: Path `roomName` is required.
+2024-01-07T01:06:57.968Z [ERROR]: Error creating room: Room validation failed: roomName: Path `roomName` is required.
+2024-01-07T01:09:05.847Z [ERROR]: Error creating room: Room validation failed: roomName: Path `roomName` is required.
+2024-01-07T01:45:48.047Z [ERROR]: Error creating room: Room validation failed: roomName: Path `roomName` is required.
+2024-01-07T01:52:00.524Z [ERROR]: Error creating room: Room validation failed: roomName: Path `roomName` is required.
+2024-01-07T02:00:51.260Z [ERROR]: Error creating room: Room validation failed: roomName: Path `roomName` is required.
+2024-01-07T02:42:57.072Z [ERROR]: Error joining room: Room not found
+2024-01-07T02:44:28.681Z [ERROR]: Error joining room: Room not found
+2024-01-07T02:47:26.356Z [ERROR]: Error joining room: Room not found
+2024-01-07T03:01:36.405Z [ERROR]: Error joining room: Cannot access 'room' before initialization
+2024-01-07T03:30:57.514Z [ERROR]: Error joining room: Room not found
+2024-01-07T03:32:52.417Z [ERROR]: Error joining room: Room not found
+2024-01-07T03:34:02.146Z [ERROR]: Error creating room: Room validation failed: maxParticipants: Path `maxParticipants` is required.
+2024-01-07T03:34:29.572Z [ERROR]: Error joining room: Room not found
+2024-01-07T03:36:56.225Z [ERROR]: Error joining room: Room not found
+2024-01-07T03:39:04.249Z [ERROR]: Error joining room: Room not found
+2024-01-07T03:47:24.871Z [ERROR]: Error joining room: Room not found
+2024-01-07T03:47:59.054Z [ERROR]: Error joining room: Room not found
+2024-01-07T03:50:25.461Z [ERROR]: Error joining room: Room not found
+2024-01-07T03:52:49.236Z [ERROR]: Error creating room: Room validation failed: roomName: Path `roomName` is required., maxParticipants: Path `maxParticipants` is required.
+2024-01-07T04:03:50.530Z [ERROR]: Error joining room: Room not found
+2024-01-07T05:16:16.080Z [ERROR]: Error starting bidding process: Bidding validation failed: endTime: Path `endTime` is required., initiator: Path `initiator` is required.
+2024-01-07T05:20:59.407Z [ERROR]: Error starting bidding process: Bidding validation failed: endTime: Path `endTime` is required., initiator: Path `initiator` is required.
+2024-01-07T05:23:22.893Z [ERROR]: Error starting bidding process: Bidding validation failed: endTime: Path `endTime` is required., initiator: Path `initiator` is required.
+2024-01-07T06:13:38.724Z [ERROR]: Error starting bidding process: BiddingProcess validation failed: endTime: Path `endTime` is required.
+2024-01-07T06:16:12.100Z [ERROR]: Error starting bidding process: BiddingProcess validation failed: endTime: Path `endTime` is required.
+2024-01-07T06:20:31.925Z [ERROR]: Error starting bidding process: BiddingProcess validation failed: endTime: Path `endTime` is required.
+2024-01-07T06:26:15.923Z [ERROR]: Error starting bidding process: BiddingProcess validation failed: duration: Path `duration` is required.
+2024-01-07T06:26:43.034Z [ERROR]: Error starting bidding process: BiddingProcess validation failed: duration: Path `duration` is required.
+2024-01-07T06:29:44.121Z [ERROR]: Error starting bidding process: BiddingProcess validation failed: hours: Path `hours` is required.
+2024-01-07T07:54:09.595Z [ERROR]: Error submitting bid: Bid validation failed: userId: Path `userId` is required., bidAmount: Path `bidAmount` is required.
+2024-01-07T07:54:34.858Z [ERROR]: Error closing bidding process: BiddingProcess validation failed: hours: Path `hours` is required., status: `closed` is not a valid enum value for path `status`.
+2024-01-07T07:54:34.862Z [ERROR]: Error closing bidding process: BiddingProcess validation failed: hours: Path `hours` is required., status: `closed` is not a valid enum value for path `status`.
+2024-01-07T07:56:05.047Z [ERROR]: Error closing bidding process: BiddingProcess validation failed: status: `closed` is not a valid enum value for path `status`.
+2024-01-07T07:56:05.048Z [ERROR]: Error closing bidding process: BiddingProcess validation failed: status: `closed` is not a valid enum value for path `status`.
+2024-01-07T08:56:00.695Z [ERROR]: Error updating bid: Bid validation failed: bidAmount: Path `bidAmount` is required.
+2024-01-07T08:56:00.698Z [ERROR]: Error updating bid: Bid validation failed: bidAmount: Path `bidAmount` is required.
+2024-01-07T23:05:25.329Z [ERROR]: Error consuming queue 'notificationEventsQueue': Cannot read properties of null (reading 'consume')
+2024-01-08T00:11:42.553Z [ERROR]: Error consuming queue 'notificationEventsQueue': Cannot read properties of null (reading 'consume')
+2024-01-08T01:02:43.517Z [ERROR]: Error consuming queue 'notificationEventsQueue': Cannot read properties of null (reading 'consume')
+2024-01-08T01:21:00.376Z [ERROR]: Error consuming queue 'notificationEventsQueue': Cannot read properties of null (reading 'consume')
+2024-01-08T08:00:03.545Z [ERROR]: Error connecting to RabbitMQ: read ECONNRESET
+2024-01-08T08:03:02.900Z [ERROR]: Error connecting to RabbitMQ: connect ECONNREFUSED ::1:5672
+2024-01-08T08:03:37.804Z [ERROR]: Error connecting to RabbitMQ: connect ECONNREFUSED ::1:5672
+2024-01-08T08:04:51.220Z [ERROR]: Error connecting to RabbitMQ: connect ECONNREFUSED ::1:5672
+2024-01-08T08:37:07.843Z [ERROR]: Error connecting to RabbitMQ: read ECONNRESET
+2024-01-08T08:52:59.782Z [ERROR]: Error logging in: Token is not defined
+2024-01-08T12:24:47.518Z [ERROR]: Error logging in: generateAccessToken is not defined
+2024-01-08T12:54:26.104Z [ERROR]: Error logging in: Model.findOneAndUpdate() no longer accepts a callback
+2024-01-08T12:58:31.641Z [ERROR]: Error logging in: access_token is not defined
+2024-01-08T13:47:11.799Z [ERROR]: Error submitting bid: Bid validation failed: bidAmount: Cast to Number failed for value "5000,0000" (type string) at path "bidAmount"
+2024-01-08T13:59:53.718Z [ERROR]: Error getting highest bid: BiddingModel.findOne is not a function
+2024-01-08T14:04:39.326Z [ERROR]: Error getting highest bid: BiddingModel.findOne is not a function
+2024-01-08T15:12:24.558Z [ERROR]: Error submitting bid: BiddingModel is not defined
+2024-01-08T15:52:24.009Z [ERROR]: Error submitting bid: The bidding process is not active or does not exist
+2024-01-08T16:18:10.868Z [ERROR]: Error submitting bid: highestBidNotificationData is not defined
+2024-01-08T16:22:45.193Z [ERROR]: Error submitting bid: highestBidNotificationData is not defined
+2024-01-08T16:26:15.959Z [ERROR]: Error submitting bid: highestBidNotificationData is not defined
+2024-01-08T17:18:20.776Z [ERROR]: Error submitting bid: The bidding process is not active or does not exist
+2024-01-08T17:34:55.746Z [ERROR]: Error updating bid: Cannot read properties of null (reading 'length')
+2024-01-08T17:34:55.747Z [ERROR]: Error updating bid: Cannot read properties of null (reading 'length')
+2024-01-08T17:43:49.737Z [ERROR]: Error closing bidding process: Bidding process is already closed
+2024-01-08T17:43:49.738Z [ERROR]: Error closing bidding process: Bidding process is already closed
+2024-01-08T17:48:43.785Z [ERROR]: Error closing bidding process: Bidding process is already closed
+2024-01-08T17:48:43.788Z [ERROR]: Error closing bidding process: Bidding process is already closed
+2024-01-08T18:53:18.639Z [ERROR]: Error closing bidding process: Bidding process is already closed
+2024-01-08T18:53:18.640Z [ERROR]: Error closing bidding process: Bidding process is already closed
+2024-01-09T04:35:17.473Z [ERROR]: Error closing bidding process: Bidding process is already closed
+2024-01-09T04:35:17.549Z [ERROR]: Error closing bidding process: Bidding process is already closed
+2024-01-09T04:42:54.351Z [ERROR]: Error closing bidding process: Cannot read properties of undefined (reading 'bidAmount')
+2024-01-09T04:42:54.358Z [ERROR]: Error closing bidding process: Cannot read properties of undefined (reading 'bidAmount')
+2024-01-09T04:44:32.470Z [ERROR]: Error closing bidding process: Bidding process is already closed
+2024-01-09T04:44:32.482Z [ERROR]: Error closing bidding process: Bidding process is already closed

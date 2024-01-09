@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: auction-bidding-app
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: auction-bidding-app
+  template:
+    metadata:
+      labels:
+        app: auction-bidding-app
+    spec:
+      containers:
+      - name: auction-bidding-app
+        image: auction-bidding-app:latest
+        ports:
+        - containerPort: 5000
