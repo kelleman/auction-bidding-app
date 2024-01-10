@@ -1,12 +1,13 @@
 const express = require('express');
-const { verifyToken } = require('../middlewares/authMiddleware');
-const biddingController = require('../controllers/biddingController');
 
-const router = express.Router();
+const {startBiddingProcess, submitBid, updateBid, closeBidding} = require('../controllers/biddingController');
+
+let router = express.Router();
+
 
 // Routes for bidding functionality
-router.post('/start-bidding-process', biddingController.startBiddingProcess);
-router.post('/submit-bid', biddingController.submitBid);
-router.put('/update-bid', biddingController.updateBid)
-router.post('/close-bidding', biddingController.closeBidding);
+router.post('/start-bidding-process', startBiddingProcess);
+router.post('/submit-bid', submitBid);
+router.put('/update-bid', updateBid)
+router.post('/close-bidding', closeBidding);
 module.exports = router;

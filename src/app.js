@@ -8,10 +8,10 @@ const port = process.env.PORT || 2020;
 // importing the routes
 const userRoutes = require('./routes/authRoutes');
 const biddingRoutes = require('./routes/biddingRoutes');
-const {authenticateToken} = require('./middlewares/authMiddleware');
+const {authVerification} = require('./middlewares/authMiddleware');
+const paymentRoutes = require('./routes/paymentRoutes')
 const notificationRoutes = require('./routes/notificationRoutes');
 const invoiceRoutes = require('./routes/invoiceRoutes');
-const paymentRoutes = require('./routes/invoiceRoutes');
 const roomRoutes = require('./routes/roomRoutes');
 
 const swaggerUi = require('swagger-ui-express');

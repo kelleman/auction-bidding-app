@@ -1,25 +1,50 @@
-// services/paymentService.js
+require('dotenv').config()
+const paystack = require('paystack')(process.env.PAYSTACK_SECRET_KEY);
 const rabbitMQ = require('../messaging/rabbitMQ');
+const {BidModel} = require('../models/biddingModel')
+const UserModel = require('../models/userModel')
 const PaymentModel = require('../models/paymentModel');
+const InvoiceModel = require('../models/invoiceModel');
 const logger = require('../utils/logger');
+ // Make sure to import InvoiceModel
 
-const processPayment = async (invoiceDetails) => {
+ const initiatePayment = async (invoiceDetails) => {
     try {
-        // Logic to process payment based on invoice details
+        // Assuming invoiceDetails include userId, biddingProcessId, and amount
+        const { userId, biddingProcessId, amount, invoiceId } = invoiceDetails;
 
-        const paymentData = {
-            invoiceDetails,
-            eventType: 'paymentProcessed',
-            /* Additional data as needed */
-        };
+        // Log the received invoiceDetails
+        console.log('Received invoiceDetails:', invoiceDetails);
 
-        rabbitMQ.sendMessage('paymentEventsQueue', JSON.stringify(paymentData));
+        // Fetch user's email from the user collection
+        const user = await UserModel.findById(userId);
+        const userEmail = user ? user.email : 'user@example.com'; // Default email if user not found
 
-        return 'Payment processed successfully';
+        // Log the fetched user email and amount
+        console.log('User Email:', userEmail);
+        console.log('Payment Amount:', amount);
+
+        // Initialize payment with Paystack
+        const paymentInitializeResponse = await paystack.transaction.initialize({
+            email: userEmail,
+            amount: invoiceDetails.amount * 100, // Paystack amount is in kobo (multiply by 100)
+        });
+
+        // Log the Paystack response
+        console.log('Paystack Response:', paymentInitializeResponse);
+
+        // Check if payment initialization was successful
+        if (!paymentInitializeResponse || !paymentInitializeResponse.data || !paymentInitializeResponse.data.authorization_url) {
+            throw new Error('Failed to initialize payment. Response: ' + JSON.stringify(paymentInitializeResponse));
+        }
+
+        // ... rest of the code
     } catch (error) {
-        logger.error(`Error processing payment: ${error.message}`);
+        console.error(`Error processing payment: ${error.message}`);
         throw error;
     }
 };
 
-module.exports = { processPayment };
+
+
+module.exports = { initiatePayment };

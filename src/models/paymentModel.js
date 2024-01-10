@@ -1,24 +1,40 @@
-// paymentModel.js
 const mongoose = require('mongoose');
 
 const paymentSchema = new mongoose.Schema({
-    userId: {
-        type: mongoose.Schema.Types.ObjectId,
-        ref: 'User',
-        required: true,
+    userId: { 
+        type: mongoose.Schema.Types.ObjectId, 
+        ref: 'User', 
+    required: true 
+},
+    biddingProcessId: { 
+        type: mongoose.Schema.Types.ObjectId, 
+        required: true 
     },
-    amount: {
-        type: Number,
-        required: true,
+    invoiceReference: { 
+        type: mongoose.Schema.Types.ObjectId, 
+        ref: 'Invoice', 
+        required: true 
+},
+    paymentReference: { 
+        type: String, 
+        required: true 
     },
-    status: {
-        type: String,
-        enum: ['pending', 'completed'],
-        default: 'pending',
+    status: { 
+        type: String, 
+        enum: ['pending', 'success', 'failure'], 
+    default: 'pending' 
+},
+    amount: { 
+        type: Number, 
+        required: true 
     },
-    transactionDate: {
-        type: Date,
-        default: Date.now,
+    reference: { 
+        type: String, 
+        required: true 
+    },
+    createdAt: { 
+        type: Date, 
+        default: Date.now 
     },
 });
 

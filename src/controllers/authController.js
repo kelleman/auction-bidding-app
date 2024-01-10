@@ -3,12 +3,10 @@ const User = require('../models/userModel');
 const Token = require('../models/tokenModel');
 const logger = require('../utils/logger');
 const jwt = require('jsonwebtoken');
-
 const {
-    generateAccessToken,
-    generateRefreshToken,
-  } = require('../helpers/index');
-
+  generateAccessToken,
+  generateRefreshToken,
+} = require('../config/token');
 
 // logic for registration
 exports.register = async (req, res, next) => {
@@ -39,57 +37,119 @@ exports.register = async (req, res, next) => {
 };
 
 exports.login = async (req, res, next) => {
-    try {
-      const { email, password } = req.body;
+  try {
+    const { email, password } = req.body;
+
+    // Find the user by email
+    const user = await User.findOne({ email });
+    if (!user) {
+      logger.error(`Invalid login attempt for email: ${email}`);
+      return res.status(401).json({ error: 'Invalid credentials' });
+    }
+
+    // Compare passwords
+    const passwordMatch = await bcrypt.compare(password, user.password);
+    if (!passwordMatch) {
+      logger.error(`Invalid login attempt for email: ${email}`);
+      return res.status(401).json({ error: 'Invalid credentials' });
+    }
+
+    // Generate tokens and validity periods
+    const access_token_validity = Date.now() + 86400 * 1000; // 1 day
+    const refresh_token_validity = Date.now() + 604800 * 1000; // 1 week
+
+    const access_token = generateAccessToken({ id: user.id, email: user.email });
+    const refresh_token = generateRefreshToken({ id: user.id, email: user.email });
+
+    const options = {
+      access_token,
+      access_token_validity,
+      refresh_token,
+      refresh_token_validity,
+    };
+
+    // Update or insert the tokens in the Token model
+    const updatedToken = await Token.findOneAndUpdate(
+      { user_id: user._id },
+      options,
+      { new: true, upsert: true }
+    );
+
+    res.status(200).json({
+      status: true,
+      message: 'Logged in successfully',
+      user_id: user.id,
+      ...options,
+    });
+  } catch (error) {
+    logger.error(`Error logging in: ${error.message}`);
+    next(error);
+  }
+};
+
   
-      // Find the user by email
-      const user = await User.findOne({ email });
-      if (!user) {
-        logger.error(`Invalid login attempt for email: ${email}`);
-        return res.status(401).json({ error: 'Invalid credentials' });
+
+exports.refresh_token = async (req, res) => {
+  try {
+    const refresh_token = req.body.token;
+    if (!refresh_token)
+      return res
+        .status(400)
+        .send({ status: false, message: 'Refresh token is required!' });
+    Token.findOne({ refresh_token: refresh_token }).exec((err, token) => {
+      if (err) {
+        console.log(err);
+        return res
+          .status(500)
+          .send({
+            status: false,
+            message: 'An error occured generating token!',
+          });
       }
-  
-      // Compare passwords
-      const passwordMatch = await bcrypt.compare(password, user.password);
-      if (!passwordMatch) {
-        logger.error(`Invalid login attempt for email: ${email}`);
-        return res.status(401).json({ error: 'Invalid credentials' });
+
+      if (!token)
+        return res
+          .status(403)
+          .send({ status: false, message: 'Invalid token!' });
+
+      //Check if refresh token is still valid
+      if (token.refresh_token_validity < new Date().getTime()) {
+        return res
+          .status(400)
+          .send({
+            status: false,
+            message: 'Refresh token has expired, please login',
+          });
       }
-  
-      // Generate JWT token
-      const access_token = jwt.sign({ userId: user._id }, process.env.JWT_SECRET, { expiresIn: '30m' });
-      const refresh_token = jwt.sign({ userId: user._id }, process.env.JWT_SECRET, { expiresIn: '30d' });
-  
-      // Save the refresh token in the database
-      await Token.findOneAndUpdate(
-        { userId: user._id },
-        { access_token: access_token, refresh_token: refresh_token },
-        { upsert: true }
-      );
-  
-      // Update token with new values
-      const access_token_validity = parseInt(new Date().getTime()) + 86400 * 1000;
-      const refresh_token_validity = parseInt(new Date().getTime()) + 604800 * 1000;
-  
+
+      let access_token = generateAccessToken({ id: token.user_id });
+
+      let access_token_validity = parseInt(new Date().getTime()) + 86400 * 1000;
+
       const options = {
         access_token,
         access_token_validity,
-        refresh_token,
-        refresh_token_validity,
       };
-  
-      // Log the user in
-      await Token.findOneAndUpdate(
-        { userId: user._id },
+      //Update with new
+      Token.findByIdAndUpdate(
+        token._id,
         options,
-        { new: true, upsert: true }
+        { new: true, upsert: true },
+        (err, token) => {
+          if (err) return res.status(500).send({ status: false, message: err });
+
+          return res.status(200).send({
+            status: true,
+            message: 'Token Generated Successfully!',
+            ...options,
+          });
+        },
       );
-  
-      logger.info(`User logged in: ${email}`);
-      res.status(200).json({ access_Token: access_token, refresh_token: refresh_token });
-    } catch (error) {
-      logger.error(`Error logging in: ${error.message}`);
-      next(error);
-    }
-  };
-  
+    });
+  } catch (error) {
+    console.log(error);
+    return res
+      .status(500)
+      .send({ status: false, message: 'An error occurred' });
+  }
+};

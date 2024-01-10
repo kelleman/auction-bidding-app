@@ -389,3 +389,153 @@
 2024-01-09T04:52:33.590Z [INFO]: Connected to RabbitMQ
 2024-01-09T04:52:33.593Z [INFO]: Consuming messages from queue 'notificationEventsQueue'
 2024-01-09T04:53:19.711Z [INFO]: Message sent to queue 'biddingEventsQueue': {"roomId":"659bf87634aba32b9f1ac10b","eventType":"biddingClosed","biddingProcessId":"659c19f37e057e7ff4ada002","highestBidder":"659b3edb464984cd4af1648c","productDescription":"30000KVA Generator"}
+2024-01-09T13:19:13.941Z [INFO]: Connected to RabbitMQ
+2024-01-09T13:19:13.947Z [INFO]: Connected to RabbitMQ
+2024-01-09T13:19:14.840Z [INFO]: Consuming messages from queue 'notificationEventsQueue'
+2024-01-09T17:21:46.625Z [INFO]: Connected to RabbitMQ
+2024-01-09T17:21:46.628Z [INFO]: Connected to RabbitMQ
+2024-01-09T17:21:46.632Z [INFO]: Consuming messages from queue 'notificationEventsQueue'
+2024-01-09T17:31:07.429Z [INFO]: Connected to RabbitMQ
+2024-01-09T17:31:07.437Z [INFO]: Connected to RabbitMQ
+2024-01-09T17:31:07.442Z [INFO]: Consuming messages from queue 'notificationEventsQueue'
+2024-01-09T17:31:58.528Z [ERROR]: Error logging in: generateAccessToken is not defined
+2024-01-09T17:40:59.420Z [INFO]: Connected to RabbitMQ
+2024-01-09T17:40:59.435Z [INFO]: Connected to RabbitMQ
+2024-01-09T17:40:59.439Z [INFO]: Consuming messages from queue 'notificationEventsQueue'
+2024-01-09T17:41:08.808Z [INFO]: User logged in: godfreyatser@gmail.com
+2024-01-09T17:48:47.770Z [INFO]: User logged in: godfreyatser@gmail.com
+2024-01-09T18:43:13.901Z [ERROR]: Invalid login attempt for email: godfrey@gmail.com
+2024-01-09T18:43:53.009Z [INFO]: User logged in: godfreyatser@gmail.com
+2024-01-09T18:45:05.955Z [INFO]: User logged in: godfreyatser@gmail.com
+2024-01-09T21:41:39.722Z [INFO]: Connected to RabbitMQ
+2024-01-09T21:41:39.729Z [INFO]: Connected to RabbitMQ
+2024-01-09T21:41:39.732Z [INFO]: Consuming messages from queue 'notificationEventsQueue'
+2024-01-09T21:43:50.993Z [INFO]: User logged in: godfreyatser@gmail.com
+2024-01-09T23:38:13.965Z [INFO]: Connected to RabbitMQ
+2024-01-09T23:38:13.971Z [INFO]: Connected to RabbitMQ
+2024-01-09T23:38:14.035Z [INFO]: Consuming messages from queue 'notificationEventsQueue'
+2024-01-09T23:41:06.097Z [ERROR]: Error logging in: secretOrPrivateKey must have a value
+2024-01-09T23:52:36.391Z [INFO]: Connected to RabbitMQ
+2024-01-09T23:52:36.508Z [INFO]: Consuming messages from queue 'notificationEventsQueue'
+2024-01-09T23:52:36.689Z [INFO]: Connected to RabbitMQ
+2024-01-09T23:53:42.882Z [ERROR]: Error logging in: secretOrPrivateKey must have a value
+2024-01-09T23:58:27.497Z [INFO]: Connected to RabbitMQ
+2024-01-09T23:58:27.502Z [INFO]: Connected to RabbitMQ
+2024-01-09T23:58:27.504Z [INFO]: Consuming messages from queue 'notificationEventsQueue'
+2024-01-09T23:59:36.643Z [ERROR]: Error logging in: Model.findOneAndUpdate() no longer accepts a callback
+2024-01-10T00:04:44.298Z [INFO]: Connected to RabbitMQ
+2024-01-10T00:04:44.303Z [INFO]: Connected to RabbitMQ
+2024-01-10T00:04:44.305Z [INFO]: Consuming messages from queue 'notificationEventsQueue'
+2024-01-10T00:06:16.355Z [ERROR]: Error logging in: Model.findOneAndUpdate() no longer accepts a callback
+2024-01-10T00:12:51.654Z [INFO]: Connected to RabbitMQ
+2024-01-10T00:12:51.673Z [INFO]: Connected to RabbitMQ
+2024-01-10T00:12:51.677Z [INFO]: Consuming messages from queue 'notificationEventsQueue'
+2024-01-10T00:13:02.020Z [ERROR]: Error logging in: Model.findOneAndUpdate() no longer accepts a callback
+2024-01-10T00:17:41.784Z [INFO]: Connected to RabbitMQ
+2024-01-10T00:17:41.792Z [INFO]: Connected to RabbitMQ
+2024-01-10T00:17:41.795Z [INFO]: Consuming messages from queue 'notificationEventsQueue'
+2024-01-10T06:05:08.621Z [INFO]: Connected to RabbitMQ
+2024-01-10T06:05:08.627Z [INFO]: Connected to RabbitMQ
+2024-01-10T06:05:08.637Z [INFO]: Consuming messages from queue 'notificationEventsQueue'
+2024-01-10T06:22:16.626Z [INFO]: Connected to RabbitMQ
+2024-01-10T06:22:16.636Z [INFO]: Connected to RabbitMQ
+2024-01-10T06:22:16.639Z [INFO]: Consuming messages from queue 'notificationEventsQueue'
+2024-01-10T08:07:14.592Z [INFO]: Connected to RabbitMQ
+2024-01-10T08:07:14.598Z [INFO]: Connected to RabbitMQ
+2024-01-10T08:07:14.602Z [INFO]: Consuming messages from queue 'notificationEventsQueue'
+2024-01-10T08:12:17.575Z [ERROR]: Error closing bidding process: InvoiceModel is not defined
+2024-01-10T08:12:17.577Z [INFO]: Message sent to queue 'biddingEventsQueue': {"roomId":"659a1fc852471e4d91e1695e","eventType":"biddingClosed","biddingProcessId":"659a455b48094fc506daab8d","highestBidder":"6599ecec4d886628de03e91d","productDescription":"This is MacBook Pro"}
+2024-01-10T08:12:17.607Z [ERROR]: Error closing bidding process: InvoiceModel is not defined
+2024-01-10T08:21:30.777Z [INFO]: Connected to RabbitMQ
+2024-01-10T08:21:30.782Z [INFO]: Connected to RabbitMQ
+2024-01-10T08:21:30.784Z [INFO]: Consuming messages from queue 'notificationEventsQueue'
+2024-01-10T08:25:34.589Z [ERROR]: Error closing bidding process: Bidding process is already closed
+2024-01-10T08:25:34.591Z [ERROR]: Error closing bidding process: Bidding process is already closed
+2024-01-10T08:26:29.802Z [INFO]: Message sent to queue 'biddingEventsQueue': {"roomId":"659a1fc852471e4d91e1695e","eventType":"biddingClosed","biddingProcessId":"659a455b48094fc506daab8d","highestBidder":"6599ecec4d886628de03e91d","productDescription":"This is MacBook Pro"}
+2024-01-10T08:26:29.810Z [ERROR]: Error closing bidding process: Invoice validation failed: bankName: Path `bankName` is required., accountNumber: Path `accountNumber` is required., productDescription: Path `productDescription` is required., bidAmount: Path `bidAmount` is required.
+2024-01-10T08:26:29.814Z [ERROR]: Error closing bidding process: Invoice validation failed: bankName: Path `bankName` is required., accountNumber: Path `accountNumber` is required., productDescription: Path `productDescription` is required., bidAmount: Path `bidAmount` is required.
+2024-01-10T08:30:47.935Z [INFO]: Connected to RabbitMQ
+2024-01-10T08:30:47.938Z [INFO]: Connected to RabbitMQ
+2024-01-10T08:30:47.942Z [INFO]: Consuming messages from queue 'notificationEventsQueue'
+2024-01-10T08:31:42.149Z [INFO]: Message sent to queue 'biddingEventsQueue': {"roomId":"659a1fc852471e4d91e1695e","eventType":"biddingClosed","biddingProcessId":"659a455b48094fc506daab8d","highestBidder":"6599ecec4d886628de03e91d","productDescription":"This is MacBook Pro"}
+2024-01-10T08:31:42.164Z [ERROR]: Error closing bidding process: Invoice validation failed: productDescription: Path `productDescription` is required., bidAmount: Path `bidAmount` is required.
+2024-01-10T08:31:42.165Z [ERROR]: Error closing bidding process: Invoice validation failed: productDescription: Path `productDescription` is required., bidAmount: Path `bidAmount` is required.
+2024-01-10T08:46:20.762Z [INFO]: Connected to RabbitMQ
+2024-01-10T08:46:20.786Z [INFO]: Consuming messages from queue 'notificationEventsQueue'
+2024-01-10T08:46:20.795Z [INFO]: Connected to RabbitMQ
+2024-01-10T08:50:30.893Z [INFO]: Message sent to queue 'biddingEventsQueue': {"roomId":"659a1fc852471e4d91e1695e","eventType":"biddingClosed","biddingProcessId":"659a455b48094fc506daab8d","highestBidder":"6599ecec4d886628de03e91d","productDescription":"This is MacBook Pro"}
+2024-01-10T08:50:30.904Z [ERROR]: Error closing bidding process: Invoice validation failed: bidAmount: Path `bidAmount` is required.
+2024-01-10T08:50:30.905Z [ERROR]: Error closing bidding process: Invoice validation failed: bidAmount: Path `bidAmount` is required.
+2024-01-10T08:53:14.746Z [INFO]: Message sent to queue 'biddingEventsQueue': {"roomId":"659bf87634aba32b9f1ac10b","eventType":"biddingClosed","biddingProcessId":"659c37ad43e73793e26e09e9","highestBidder":null,"productDescription":"Office AC "}
+2024-01-10T08:58:12.647Z [INFO]: Connected to RabbitMQ
+2024-01-10T08:58:12.651Z [INFO]: Connected to RabbitMQ
+2024-01-10T08:58:12.653Z [INFO]: Consuming messages from queue 'notificationEventsQueue'
+2024-01-10T08:59:42.198Z [INFO]: Message sent to queue 'biddingEventsQueue': {"roomId":"659bf87634aba32b9f1ac10b","eventType":"biddingClosed","biddingProcessId":"659c37ad43e73793e26e09e9","highestBidder":null,"productDescription":"Office AC "}
+2024-01-10T09:03:50.769Z [INFO]: Connected to RabbitMQ
+2024-01-10T09:03:50.775Z [INFO]: Connected to RabbitMQ
+2024-01-10T09:03:50.781Z [INFO]: Consuming messages from queue 'notificationEventsQueue'
+2024-01-10T09:04:01.639Z [INFO]: Message sent to queue 'biddingEventsQueue': {"roomId":"659bf87634aba32b9f1ac10b","eventType":"biddingClosed","biddingProcessId":"659c37ad43e73793e26e09e9","highestBidder":null,"productDescription":"Office AC "}
+2024-01-10T09:05:17.846Z [INFO]: Connected to RabbitMQ
+2024-01-10T09:05:17.853Z [INFO]: Connected to RabbitMQ
+2024-01-10T09:05:17.857Z [INFO]: Consuming messages from queue 'notificationEventsQueue'
+2024-01-10T09:06:04.881Z [INFO]: Message sent to queue 'biddingEventsQueue': {"roomId":"659bf87634aba32b9f1ac10b","eventType":"biddingClosed","biddingProcessId":"659c37ad43e73793e26e09e9","highestBidder":null,"productDescription":"Office AC "}
+2024-01-10T09:17:46.167Z [INFO]: Connected to RabbitMQ
+2024-01-10T09:17:46.175Z [INFO]: Connected to RabbitMQ
+2024-01-10T09:17:46.178Z [INFO]: Consuming messages from queue 'notificationEventsQueue'
+2024-01-10T09:18:52.212Z [INFO]: Message sent to queue 'biddingEventsQueue': {"roomId":"659bf87634aba32b9f1ac10b","eventType":"biddingClosed","biddingProcessId":"659c37ad43e73793e26e09e9","highestBidder":null,"productDescription":"Office AC "}
+2024-01-10T09:41:51.352Z [INFO]: Connected to RabbitMQ
+2024-01-10T09:41:51.409Z [INFO]: Connected to RabbitMQ
+2024-01-10T09:41:51.472Z [INFO]: Consuming messages from queue 'notificationEventsQueue'
+2024-01-10T09:42:05.093Z [INFO]: Message sent to queue 'biddingEventsQueue': {"roomId":"659bf87634aba32b9f1ac10b","eventType":"biddingClosed","biddingProcessId":"659c37ad43e73793e26e09e9","highestBidder":null,"productDescription":"Office AC "}
+2024-01-10T09:43:57.256Z [INFO]: Connected to RabbitMQ
+2024-01-10T09:43:57.262Z [INFO]: Consuming messages from queue 'notificationEventsQueue'
+2024-01-10T09:43:57.298Z [INFO]: Connected to RabbitMQ
+2024-01-10T09:44:44.230Z [INFO]: Message sent to queue 'biddingEventsQueue': {"roomId":"659bf87634aba32b9f1ac10b","eventType":"biddingClosed","biddingProcessId":"659c37ad43e73793e26e09e9","highestBidder":null,"productDescription":"Office AC "}
+2024-01-10T09:45:52.292Z [INFO]: Message sent to queue 'biddingEventsQueue': {"roomId":"659bf87634aba32b9f1ac10b","eventType":"biddingClosed","biddingProcessId":"659c2e49f6302d3eaa0de268","highestBidder":"659b3edb464984cd4af1648c","productDescription":"30000KVA Generator"}
+2024-01-10T09:45:52.528Z [INFO]: Message sent to queue 'notificationQueue': {"userId":"659b3edb464984cd4af1648c","notification":{"eventType":"invoiceSent","invoiceId":"659e6750c564065f81b85846","amount":190000,"description":"Invoice for winning bid in 30000KVA Generator"}}
+2024-01-10T10:26:30.723Z [INFO]: Connected to RabbitMQ
+2024-01-10T10:26:30.729Z [INFO]: Connected to RabbitMQ
+2024-01-10T10:26:30.737Z [INFO]: Consuming messages from queue 'notificationEventsQueue'
+2024-01-10T10:43:14.488Z [INFO]: Connected to RabbitMQ
+2024-01-10T10:43:14.499Z [INFO]: Connected to RabbitMQ
+2024-01-10T10:43:14.518Z [INFO]: Consuming messages from queue 'notificationEventsQueue'
+2024-01-10T10:50:44.329Z [ERROR]: Error connecting to RabbitMQ: read ECONNRESET
+2024-01-10T19:22:54.425Z [INFO]: Connected to RabbitMQ
+2024-01-10T19:22:54.430Z [INFO]: Connected to RabbitMQ
+2024-01-10T19:22:54.436Z [INFO]: Consuming messages from queue 'notificationEventsQueue'
+2024-01-10T19:33:40.752Z [INFO]: Connected to RabbitMQ
+2024-01-10T19:33:40.755Z [INFO]: Connected to RabbitMQ
+2024-01-10T19:33:40.759Z [INFO]: Consuming messages from queue 'notificationEventsQueue'
+2024-01-10T19:37:55.775Z [INFO]: Connected to RabbitMQ
+2024-01-10T19:37:55.780Z [INFO]: Consuming messages from queue 'notificationEventsQueue'
+2024-01-10T19:37:55.874Z [INFO]: Connected to RabbitMQ
+2024-01-10T19:46:06.862Z [INFO]: Connected to RabbitMQ
+2024-01-10T19:46:06.891Z [INFO]: Connected to RabbitMQ
+2024-01-10T19:46:06.897Z [INFO]: Consuming messages from queue 'notificationEventsQueue'
+2024-01-10T19:56:09.016Z [INFO]: Connected to RabbitMQ
+2024-01-10T19:56:09.029Z [INFO]: Connected to RabbitMQ
+2024-01-10T19:56:09.039Z [INFO]: Consuming messages from queue 'notificationEventsQueue'
+2024-01-10T20:07:25.173Z [INFO]: Connected to RabbitMQ
+2024-01-10T20:07:25.180Z [INFO]: Connected to RabbitMQ
+2024-01-10T20:07:25.183Z [INFO]: Consuming messages from queue 'notificationEventsQueue'
+2024-01-10T20:41:17.927Z [INFO]: Connected to RabbitMQ
+2024-01-10T20:41:17.933Z [INFO]: Connected to RabbitMQ
+2024-01-10T20:41:18.100Z [INFO]: Consuming messages from queue 'notificationEventsQueue'
+2024-01-10T20:54:24.064Z [INFO]: Connected to RabbitMQ
+2024-01-10T20:54:24.080Z [INFO]: Connected to RabbitMQ
+2024-01-10T20:54:24.082Z [INFO]: Consuming messages from queue 'notificationEventsQueue'
+2024-01-10T21:03:06.591Z [INFO]: Connected to RabbitMQ
+2024-01-10T21:03:06.602Z [INFO]: Connected to RabbitMQ
+2024-01-10T21:03:06.606Z [INFO]: Consuming messages from queue 'notificationEventsQueue'
+2024-01-10T21:09:04.632Z [INFO]: Connected to RabbitMQ
+2024-01-10T21:09:04.638Z [INFO]: Connected to RabbitMQ
+2024-01-10T21:09:04.641Z [INFO]: Consuming messages from queue 'notificationEventsQueue'
+2024-01-10T21:36:16.776Z [INFO]: Connected to RabbitMQ
+2024-01-10T21:36:16.781Z [INFO]: Connected to RabbitMQ
+2024-01-10T21:36:16.796Z [INFO]: Consuming messages from queue 'notificationEventsQueue'
+2024-01-10T21:43:02.108Z [INFO]: Connected to RabbitMQ
+2024-01-10T21:43:02.118Z [INFO]: Consuming messages from queue 'notificationEventsQueue'
+2024-01-10T21:43:02.121Z [INFO]: Connected to RabbitMQ
+2024-01-10T22:01:48.271Z [INFO]: Connected to RabbitMQ
+2024-01-10T22:01:48.275Z [INFO]: Connected to RabbitMQ
+2024-01-10T22:01:48.278Z [INFO]: Consuming messages from queue 'notificationEventsQueue'

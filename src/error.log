@@ -78,3 +78,21 @@
 2024-01-09T04:42:54.358Z [ERROR]: Error closing bidding process: Cannot read properties of undefined (reading 'bidAmount')
 2024-01-09T04:44:32.470Z [ERROR]: Error closing bidding process: Bidding process is already closed
 2024-01-09T04:44:32.482Z [ERROR]: Error closing bidding process: Bidding process is already closed
+2024-01-09T17:31:58.528Z [ERROR]: Error logging in: generateAccessToken is not defined
+2024-01-09T18:43:13.901Z [ERROR]: Invalid login attempt for email: godfrey@gmail.com
+2024-01-09T23:41:06.097Z [ERROR]: Error logging in: secretOrPrivateKey must have a value
+2024-01-09T23:53:42.882Z [ERROR]: Error logging in: secretOrPrivateKey must have a value
+2024-01-09T23:59:36.643Z [ERROR]: Error logging in: Model.findOneAndUpdate() no longer accepts a callback
+2024-01-10T00:06:16.355Z [ERROR]: Error logging in: Model.findOneAndUpdate() no longer accepts a callback
+2024-01-10T00:13:02.020Z [ERROR]: Error logging in: Model.findOneAndUpdate() no longer accepts a callback
+2024-01-10T08:12:17.575Z [ERROR]: Error closing bidding process: InvoiceModel is not defined
+2024-01-10T08:12:17.607Z [ERROR]: Error closing bidding process: InvoiceModel is not defined
+2024-01-10T08:25:34.589Z [ERROR]: Error closing bidding process: Bidding process is already closed
+2024-01-10T08:25:34.591Z [ERROR]: Error closing bidding process: Bidding process is already closed
+2024-01-10T08:26:29.810Z [ERROR]: Error closing bidding process: Invoice validation failed: bankName: Path `bankName` is required., accountNumber: Path `accountNumber` is required., productDescription: Path `productDescription` is required., bidAmount: Path `bidAmount` is required.
+2024-01-10T08:26:29.814Z [ERROR]: Error closing bidding process: Invoice validation failed: bankName: Path `bankName` is required., accountNumber: Path `accountNumber` is required., productDescription: Path `productDescription` is required., bidAmount: Path `bidAmount` is required.
+2024-01-10T08:31:42.164Z [ERROR]: Error closing bidding process: Invoice validation failed: productDescription: Path `productDescription` is required., bidAmount: Path `bidAmount` is required.
+2024-01-10T08:31:42.165Z [ERROR]: Error closing bidding process: Invoice validation failed: productDescription: Path `productDescription` is required., bidAmount: Path `bidAmount` is required.
+2024-01-10T08:50:30.904Z [ERROR]: Error closing bidding process: Invoice validation failed: bidAmount: Path `bidAmount` is required.
+2024-01-10T08:50:30.905Z [ERROR]: Error closing bidding process: Invoice validation failed: bidAmount: Path `bidAmount` is required.
+2024-01-10T10:50:44.329Z [ERROR]: Error connecting to RabbitMQ: read ECONNRESET

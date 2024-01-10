@@ -1,6 +1,7 @@
-// services/biddingService.js
+
 const rabbitMQ = require('../messaging/rabbitMQ');
 const { BiddingProcessModel, BidModel } = require('../models/biddingModel');
+const InvoiceModel = require('../models/invoiceModel');
 const logger = require('../utils/logger');
 
 // logic for opening or initiating a auction for bidding
@@ -201,10 +202,7 @@ const closeBiddingProcess = async (biddingProcessId) => {
             throw error;
         }
 
-        // Update the bidding process status to 'closed'
-        biddingProcess.status = 'inactive';
-        await biddingProcess.save();
-
+        
         // Find the highest bidder(s)
         const highestBids = await BidModel
             .find({ biddingProcessId, bidAmount: { $gt: 0 } })
@@ -212,16 +210,59 @@ const closeBiddingProcess = async (biddingProcessId) => {
             .limit(1)
             .select('userId bidAmount -_id');
 
+        console.log('Highest Bids:', highestBids);
+
         // Notify all users in the room about the bidding process closure
         const notificationData = {
             roomId: biddingProcess.roomId,
             eventType: 'biddingClosed',
             biddingProcessId,
-            highestBidder: highestBids.length > 0 ? highestBids[0].userId : null, // The ID of the highest bidder
+            highestBidder: highestBids.length > 0 ? highestBids[0].userId : null,
             productDescription: biddingProcess.productDescription,
         };
 
+        // Send notification to biddingEventsQueue
         rabbitMQ.sendMessage('biddingEventsQueue', JSON.stringify(notificationData));
+
+        // Send invoice to the highest bidder (if exists)
+        if (highestBids.length > 0) {
+            const highestBidderId = highestBids[0].userId;
+
+            // Create an invoice with relevant information
+            const invoiceData = {
+                userId: highestBidderId,
+                biddingProcessId,
+                amount: highestBids[0].bidAmount,
+                description: `Invoice for winning bid in ${biddingProcess.productDescription}`,
+            };
+
+            console.log('Invoice Data:', invoiceData);
+
+            // Save the invoice to InvoiceModel (or your invoice collection)
+            const invoice = await InvoiceModel.create(invoiceData);
+
+            console.log('Invoice Created:', invoice);
+
+            // Send invoice notification to the highest bidder
+            const invoiceNotification = {
+                eventType: 'invoiceSent',
+                invoiceId: invoice._id,
+                amount: invoice.amount,
+                description: invoice.description,
+            };
+
+            console.log('Invoice Notification:', invoiceNotification);
+
+            rabbitMQ.sendMessage('notificationQueue', JSON.stringify({
+                userId: highestBidderId,
+                notification: invoiceNotification,
+            }));
+        }
+
+        // Update the bidding process status to 'closed'
+        biddingProcess.status = 'inactive';
+        await biddingProcess.save();
+
 
         return {
             message: 'Bidding process closed successfully',
@@ -231,11 +272,10 @@ const closeBiddingProcess = async (biddingProcessId) => {
             } : {},
         };
     } catch (error) {
-        logger.error(`Error closing bidding process: ${error.message}`);
+        console.error(`Error closing bidding process: ${error.message}`);
         throw error;
     }
 };
-
 
 module.exports = {
     startBiddingProcess,
