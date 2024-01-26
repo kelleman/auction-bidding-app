@@ -539,3 +539,31 @@
 2024-01-10T22:01:48.271Z [INFO]: Connected to RabbitMQ
 2024-01-10T22:01:48.275Z [INFO]: Connected to RabbitMQ
 2024-01-10T22:01:48.278Z [INFO]: Consuming messages from queue 'notificationEventsQueue'
+2024-01-25T19:52:24.696Z [INFO]: Connected to RabbitMQ
+2024-01-25T19:52:24.721Z [INFO]: Connected to RabbitMQ
+2024-01-25T19:52:25.410Z [INFO]: Consuming messages from queue 'notificationEventsQueue'
+2024-01-25T19:57:52.528Z [INFO]: Connected to RabbitMQ
+2024-01-25T19:57:52.716Z [INFO]: Consuming messages from queue 'notificationEventsQueue'
+2024-01-25T19:57:52.895Z [INFO]: Connected to RabbitMQ
+2024-01-26T09:24:19.318Z [INFO]: Connected to RabbitMQ
+2024-01-26T09:24:19.325Z [INFO]: Connected to RabbitMQ
+2024-01-26T09:24:19.326Z [INFO]: Consuming messages from queue 'notificationEventsQueue'
+2024-01-26T09:25:33.569Z [INFO]: Connected to RabbitMQ
+2024-01-26T09:25:33.574Z [INFO]: Connected to RabbitMQ
+2024-01-26T09:25:33.577Z [INFO]: Consuming messages from queue 'notificationEventsQueue'
+2024-01-26T09:32:22.035Z [INFO]: User registered: godelatser@gmail.com
+2024-01-26T11:30:12.285Z [ERROR]: Error logging in: secretOrPrivateKey must have a value
+2024-01-26T11:44:55.104Z [INFO]: Connected to RabbitMQ
+2024-01-26T11:44:55.108Z [INFO]: Connected to RabbitMQ
+2024-01-26T11:44:55.121Z [INFO]: Consuming messages from queue 'notificationEventsQueue'
+2024-01-26T11:45:05.859Z [ERROR]: Error logging in: secretOrPrivateKey must have a value
+2024-01-26T11:54:40.860Z [INFO]: Connected to RabbitMQ
+2024-01-26T11:54:40.866Z [INFO]: Connected to RabbitMQ
+2024-01-26T11:54:40.869Z [INFO]: Consuming messages from queue 'notificationEventsQueue'
+2024-01-26T11:56:49.398Z [ERROR]: Error logging in: secretOrPrivateKey must have a value
+2024-01-26T11:57:59.647Z [INFO]: Connected to RabbitMQ
+2024-01-26T11:57:59.658Z [INFO]: Connected to RabbitMQ
+2024-01-26T11:57:59.669Z [INFO]: Consuming messages from queue 'notificationEventsQueue'
+2024-01-26T11:59:25.343Z [INFO]: Room created: New Room
+2024-01-26T12:03:13.087Z [ERROR]: Error starting bidding process: read ECONNRESET
+2024-01-26T12:27:30.669Z [INFO]: Message sent to queue 'biddingEventsQueue': {"roomId":"65b39e94304e1982201dd790","eventType":"biddingStarted","productDescription":"Duplex ","startTime":"2024-01-26T12:27:29.955Z"}

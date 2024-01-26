@@ -96,3 +96,7 @@
 2024-01-10T08:50:30.904Z [ERROR]: Error closing bidding process: Invoice validation failed: bidAmount: Path `bidAmount` is required.
 2024-01-10T08:50:30.905Z [ERROR]: Error closing bidding process: Invoice validation failed: bidAmount: Path `bidAmount` is required.
 2024-01-10T10:50:44.329Z [ERROR]: Error connecting to RabbitMQ: read ECONNRESET
+2024-01-26T11:30:12.285Z [ERROR]: Error logging in: secretOrPrivateKey must have a value
+2024-01-26T11:45:05.859Z [ERROR]: Error logging in: secretOrPrivateKey must have a value
+2024-01-26T11:56:49.398Z [ERROR]: Error logging in: secretOrPrivateKey must have a value
+2024-01-26T12:03:13.087Z [ERROR]: Error starting bidding process: read ECONNRESET
