@@ -567,3 +567,62 @@
 2024-01-26T11:59:25.343Z [INFO]: Room created: New Room
 2024-01-26T12:03:13.087Z [ERROR]: Error starting bidding process: read ECONNRESET
 2024-01-26T12:27:30.669Z [INFO]: Message sent to queue 'biddingEventsQueue': {"roomId":"65b39e94304e1982201dd790","eventType":"biddingStarted","productDescription":"Duplex ","startTime":"2024-01-26T12:27:29.955Z"}
+2024-01-26T16:17:49.364Z [INFO]: Connected to RabbitMQ
+2024-01-26T16:17:49.589Z [INFO]: Connected to RabbitMQ
+2024-01-26T16:17:49.824Z [INFO]: Consuming messages from queue 'notificationEventsQueue'
+2024-01-26T16:24:31.978Z [INFO]: User registered: godfrey1atser@gmail.com
+2024-01-26T16:25:21.061Z [ERROR]: Invalid login attempt for email: godfrey1atser@gmail.com
+2024-01-26T16:27:04.637Z [INFO]: Room created: Godfrey's new room
+2024-01-26T16:31:18.272Z [INFO]: Message sent to queue 'biddingEventsQueue': {"roomId":"65b3dd580091fa238b0b3362","eventType":"biddingStarted","productDescription":"AC ","startTime":"2024-01-26T16:31:17.973Z"}
+2024-01-26T16:34:01.763Z [ERROR]: Error submitting bid: The bidding process is not active or does not exist
+2024-01-28T06:01:54.089Z [INFO]: Connected to RabbitMQ
+2024-01-28T06:01:54.092Z [INFO]: Connected to RabbitMQ
+2024-01-28T06:01:54.096Z [INFO]: Consuming messages from queue 'notificationEventsQueue'
+2024-01-28T06:32:15.338Z [INFO]: User registered: example@gmail.com
+2024-01-28T06:39:14.668Z [INFO]: Room created: New show room
+2024-01-28T06:50:40.603Z [INFO]: Connected to RabbitMQ
+2024-01-28T06:50:40.627Z [INFO]: Connected to RabbitMQ
+2024-01-28T06:50:40.787Z [INFO]: Consuming messages from queue 'notificationEventsQueue'
+2024-01-28T06:55:24.295Z [INFO]: Connected to RabbitMQ
+2024-01-28T06:55:24.392Z [INFO]: Connected to RabbitMQ
+2024-01-28T06:55:24.397Z [INFO]: Consuming messages from queue 'notificationEventsQueue'
+2024-01-28T07:04:28.695Z [INFO]: Attempting to join room with ID: 65b5f692012f2ade80023eed
+2024-01-28T07:04:28.946Z [INFO]: Found room: {"_id":"65b5f692012f2ade80023eed","roomName":"New show room","maxParticipants":7,"__v":0}
+2024-01-28T07:04:28.947Z [ERROR]: Error joining room: Cannot read properties of undefined (reading 'length')
+2024-01-28T07:40:49.629Z [INFO]: Connected to RabbitMQ
+2024-01-28T07:40:49.646Z [INFO]: Connected to RabbitMQ
+2024-01-28T07:40:49.659Z [INFO]: Consuming messages from queue 'notificationEventsQueue'
+2024-01-28T07:41:23.715Z [INFO]: Attempting to join room with ID: 65b5f692012f2ade80023eed
+2024-01-28T07:41:23.921Z [INFO]: Found room: {"_id":"65b5f692012f2ade80023eed","roomName":"New show room","maxParticipants":7,"__v":0}
+2024-01-28T07:41:24.131Z [INFO]: User 65b5f4ee012f2ade80023ee9 joined room 65b5f692012f2ade80023eed
+2024-01-28T08:04:35.993Z [INFO]: Connected to RabbitMQ
+2024-01-28T08:04:36.000Z [INFO]: Connected to RabbitMQ
+2024-01-28T08:04:36.002Z [INFO]: Consuming messages from queue 'notificationEventsQueue'
+2024-01-28T08:05:57.991Z [INFO]: Message sent to queue 'biddingEventsQueue': {"roomId":"65b5f692012f2ade80023eed","eventType":"biddingStarted","productDescription":"MacBook pro","startTime":"2024-01-28T08:05:57.789Z"}
+2024-01-28T08:10:34.174Z [INFO]: Message sent to queue 'biddingEventsQueue': {"roomId":"65b5f692012f2ade80023eed","eventType":"bidSubmitted","userId":"65b5f4ee012f2ade80023ee9","bidAmount":8000}
+2024-01-28T08:10:34.380Z [INFO]: Message sent to queue 'biddingEventsQueue': {"roomId":"65b5f692012f2ade80023eed","eventType":"highestBidUpdated","highestBidAmount":8000,"highestBidder":"65b5f4ee012f2ade80023ee9"}
+2024-01-28T08:14:51.183Z [INFO]: Message sent to queue 'biddingEventsQueue': {"roomId":"65b5f692012f2ade80023eed","eventType":"bidUpdated","userId":"65b5f4ee012f2ade80023ee9","newBidAmount":9000}
+2024-01-28T08:14:51.513Z [INFO]: Message sent to queue 'biddingEventsQueue': {"roomId":"65b5f692012f2ade80023eed","eventType":"highestBidUpdated","highestBidAmount":9000,"highestBidder":"65b5f4ee012f2ade80023ee9"}
+2024-01-28T08:18:27.947Z [INFO]: Message sent to queue 'biddingEventsQueue': {"roomId":"65b5f692012f2ade80023eed","eventType":"biddingClosed","biddingProcessId":"65b60ae55a4d6e17d96d455a","highestBidder":"65b5f4ee012f2ade80023ee9","productDescription":"MacBook pro"}
+2024-01-28T08:18:28.182Z [INFO]: Message sent to queue 'notificationQueue': {"userId":"65b5f4ee012f2ade80023ee9","notification":{"eventType":"invoiceSent","invoiceId":"65b60dd35a4d6e17d96d4566","amount":9000,"description":"Invoice for winning bid in MacBook pro"}}
+2024-01-28T09:00:39.388Z [INFO]: Connected to RabbitMQ
+2024-01-28T09:00:39.392Z [INFO]: Connected to RabbitMQ
+2024-01-28T09:00:39.396Z [INFO]: Consuming messages from queue 'notificationEventsQueue'
+2024-01-28T09:30:54.170Z [INFO]: Connected to RabbitMQ
+2024-01-28T09:30:54.174Z [INFO]: Connected to RabbitMQ
+2024-01-28T09:30:54.178Z [INFO]: Consuming messages from queue 'notificationEventsQueue'
+2024-01-29T13:45:06.655Z [INFO]: Connected to RabbitMQ
+2024-01-29T13:45:06.665Z [INFO]: Consuming messages from queue 'notificationEventsQueue'
+2024-01-29T13:45:06.667Z [INFO]: Connected to RabbitMQ
+2024-01-29T14:16:00.176Z [INFO]: User registered: example2@gmail.com
+2024-01-29T14:17:31.310Z [INFO]: Room created: Godfrey Room
+2024-01-29T14:19:36.260Z [INFO]: Attempting to join room with ID: 65b7b37bf9db62106625dfc4
+2024-01-29T14:19:36.551Z [INFO]: Found room: {"_id":"65b7b37bf9db62106625dfc4","roomName":"Godfrey Room","maxParticipants":20,"__v":0}
+2024-01-29T14:19:36.739Z [INFO]: User 65b7b31ff9db62106625dfc0 joined room 65b7b37bf9db62106625dfc4
+2024-01-29T14:20:51.204Z [INFO]: Message sent to queue 'biddingEventsQueue': {"roomId":"65b7b37bf9db62106625dfc4","eventType":"biddingStarted","productDescription":"Duplex","startTime":"2024-01-29T14:20:50.984Z"}
+2024-01-29T14:22:42.128Z [INFO]: Message sent to queue 'biddingEventsQueue': {"roomId":"65b7b37bf9db62106625dfc4","eventType":"bidSubmitted","userId":"65b7b31ff9db62106625dfc0","bidAmount":100000}
+2024-01-29T14:22:42.348Z [INFO]: Message sent to queue 'biddingEventsQueue': {"roomId":"65b7b37bf9db62106625dfc4","eventType":"highestBidUpdated","highestBidAmount":100000,"highestBidder":"65b7b31ff9db62106625dfc0"}
+2024-01-29T14:25:02.820Z [INFO]: Message sent to queue 'biddingEventsQueue': {"roomId":"65b7b37bf9db62106625dfc4","eventType":"bidUpdated","userId":"65b7b31ff9db62106625dfc0","newBidAmount":200000}
+2024-01-29T14:25:03.709Z [INFO]: Message sent to queue 'biddingEventsQueue': {"roomId":"65b7b37bf9db62106625dfc4","eventType":"highestBidUpdated","highestBidAmount":200000,"highestBidder":"65b7b31ff9db62106625dfc0"}
+2024-01-29T14:25:57.681Z [INFO]: Message sent to queue 'biddingEventsQueue': {"roomId":"65b7b37bf9db62106625dfc4","eventType":"biddingClosed","biddingProcessId":"65b7b442f9db62106625dfca","highestBidder":"65b7b31ff9db62106625dfc0","productDescription":"Duplex"}
+2024-01-29T14:25:58.083Z [INFO]: Message sent to queue 'notificationQueue': {"userId":"65b7b31ff9db62106625dfc0","notification":{"eventType":"invoiceSent","invoiceId":"65b7b575f9db62106625dfd6","amount":200000,"description":"Invoice for winning bid in Duplex"}}

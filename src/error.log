@@ -100,3 +100,6 @@
 2024-01-26T11:45:05.859Z [ERROR]: Error logging in: secretOrPrivateKey must have a value
 2024-01-26T11:56:49.398Z [ERROR]: Error logging in: secretOrPrivateKey must have a value
 2024-01-26T12:03:13.087Z [ERROR]: Error starting bidding process: read ECONNRESET
+2024-01-26T16:25:21.061Z [ERROR]: Invalid login attempt for email: godfrey1atser@gmail.com
+2024-01-26T16:34:01.763Z [ERROR]: Error submitting bid: The bidding process is not active or does not exist
+2024-01-28T07:04:28.947Z [ERROR]: Error joining room: Cannot read properties of undefined (reading 'length')

@@ -22,8 +22,9 @@ const createRoom = async (roomName, maxParticipants) => {
 };
 
 // Function to get details of a specific room
-const getRoomDetails = async (roomId) => {
+const getRoomDetails = async (requestData) => {
     try {
+        const { roomId } = requestData;
         const room = await RoomModel.findById(roomId);
 
         if (!room) {
@@ -38,6 +39,7 @@ const getRoomDetails = async (roomId) => {
     }
 };
 
+
 // function to join a room
 const joinRoom = async (roomId, userId) => {
     try {
@@ -51,6 +53,16 @@ const joinRoom = async (roomId, userId) => {
         }
 
         logger.info(`Found room: ${JSON.stringify(room)}`);
+
+        // Ensure 'participants' array is initialized
+        room.participants = room.participants || [];
+
+        // Check if the user is already a participant in the room
+        if (room.participants.includes(userId)) {
+            const error = new Error('User is already a participant in the room');
+            error.status = 400;
+            throw error;
+        }
 
         if (room.participants.length < room.maxParticipants) {
             room.participants.push(userId);
@@ -68,37 +80,11 @@ const joinRoom = async (roomId, userId) => {
     }
 };
 
-// Function to add a participant to a room
-// const addParticipantToRoom = async (roomId, userId) => {
-//     try {
-//         const room = await RoomModel.findById(roomId);
-
-//         if (!room) {
-//             const error = new Error('Room not found');
-//             error.status = 404;
-//             throw error;
-//         }
-
-//         if (room.participants.length < room.maxParticipants) {
-//             room.participants.push(userId);
-//             await room.save();
-
-//             logger.info(`Participant added to room ${roomId}`);
-//         } else {
-//             const error = new Error('Room is already full');
-//             error.status = 400;
-//             throw error;
-//         }
-//     } catch (error) {
-//         logger.error(`Error adding participant to room: ${error.message}`);
-//         throw error;
-//     }
-// };
 
 module.exports = {
     createRoom,
     getRoomDetails,
     joinRoom
-    // addParticipantToRoom,
+   
 };
 

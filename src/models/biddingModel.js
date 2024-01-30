@@ -21,12 +21,12 @@ const biddingProcessSchema = new mongoose.Schema({
         type: String,
         required: true,
     },
-    bankNae: {
-        type: String,
-    },
-    accountNumber: {
-        type: Number
-    },
+    // bankNae: {
+    //     type: String,
+    // },
+    // accountNumber: {
+    //     type: Number
+    // },
     startTime: {
         type: Date,
         

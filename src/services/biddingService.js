@@ -40,15 +40,20 @@ const startBiddingProcess = async (roomId, initiator, productDescription, hours)
 
         rabbitMQ.sendMessage('biddingEventsQueue', JSON.stringify(notificationData));
 
+        // Return the bidding process ID along with other information
         return {
-            message:'Bidding process started successfully',
-            auction_Data: {notificationData}
+            message: 'Bidding process started successfully',
+            auction_Data: {
+                biddingProcessId: newBiddingProcess._id.toString(), // Convert ObjectId to string
+                notificationData,
+            },
         };
     } catch (error) {
         logger.error(`Error starting bidding process: ${error.message}`);
         throw error;
     }
 };
+
 
 // logic for placing a bid
 const submitBid = async (biddingProcessId, userId, bidAmount) => {

@@ -14,8 +14,8 @@ exports.createRoom = async (req, res, next) => {
 
 exports.getRoomDetails = async (req, res, next) => {
     try {
-        const { roomId } = req.params;
-        const roomDetails = await roomService.getRoomDetails(roomId);
+        const requestData = req.body; 
+        const roomDetails = await roomService.getRoomDetails(requestData);
         res.status(200).json({ room: roomDetails });
     } catch (error) {
         next(error);

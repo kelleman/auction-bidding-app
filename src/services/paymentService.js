@@ -24,10 +24,13 @@ const logger = require('../utils/logger');
         console.log('User Email:', userEmail);
         console.log('Payment Amount:', amount);
 
+        // Convert amount to a valid number without decimal places
+        const koboAmount = Math.round(amount * 100);
+
         // Initialize payment with Paystack
         const paymentInitializeResponse = await paystack.transaction.initialize({
             email: userEmail,
-            amount: invoiceDetails.amount * 100, // Paystack amount is in kobo (multiply by 100)
+            amount: koboAmount,
         });
 
         // Log the Paystack response
@@ -38,12 +41,13 @@ const logger = require('../utils/logger');
             throw new Error('Failed to initialize payment. Response: ' + JSON.stringify(paymentInitializeResponse));
         }
 
-        // ... rest of the code
+       
     } catch (error) {
         console.error(`Error processing payment: ${error.message}`);
         throw error;
     }
 };
+
 
 
 
